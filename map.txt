@@ -1,0 +1,17 @@
+KITCHEN hidden key + uncripted message on wall <--> main room (menu) <---> laptop user called 4 FIRST ROOM
+                                                    |
+                                                princess room
+
+
+menu: has the word quit to quit the game + items + book u can read to know the story
+laptop: engine "decripter" 
+locked file : enter the uncripted code 
+locked file says "inspect the walls of the kitchen to have a glance of me"
+
+story: 
+there is a princess to save but she locked herself and she dosnt want to be saved
+ you want to be the gendle man who saves her but she actually escaped home
+ she wanted to be an artist and locked herself to create art.
+
+ u have the choice to report her and get her back home
+ let her live her dream and say you didnt find the princess.
