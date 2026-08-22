@@ -5,11 +5,6 @@ More info at: https://en.wikipedia.org/wiki/Caesar_cipher
 View this code at https://nostarch.com/big-book-small-python-projects
 Tags: short, beginner, cryptography, math"""
 
-try:
-    import pyperclip  # pyperclip copies text to the clipboard.
-except ImportError:
-    pass  # If pyperclip is not installed, do nothing. It's no big deal.
-
 # Every possible symbol that can be encrypted/decrypted:
 # (!) You can add numbers and punctuation marks to encrypt those
 # symbols as well.
@@ -22,8 +17,13 @@ encrypted into C, the letter B encrypted into D '''
 def caesar():
     # Let the user enter if they are encrypting or decrypting:
     while True:  # Keep asking until the user enters e or d.
+        print('''\n Instructions:
+        A Caesar cipher shifts every letter in the text by a fixed number of positions in the alphabet to create a code,
+        To decrypt, you just shift the letters back by that same number,
+        sliding them the opposite direction until the original message reappears.\n''')
+
         print('Do you want to (e)ncrypt or (d)ecrypt?')
-        response = input('> ').lower()
+        response = input('>> ').lower()
         if response.startswith('e'):
             mode = 'encrypt'
             break
@@ -46,7 +46,7 @@ def caesar():
 
     # Let the user enter the message to encrypt/decrypt:
     print('Enter the message to {}.'.format(mode))
-    message = input('> ')
+    message = input('>> ')
 
     # Caesar cipher only works on uppercase letters:
     message = message.upper()
@@ -78,24 +78,6 @@ def caesar():
             translated = translated + symbol
 
     # Display the encrypted/decrypted string to the screen:
-    print(translated)
+    print(f'\n You code is: {translated}')
+    print("\n Closing the program... \n")
 
-    try:
-        pyperclip.copy(translated)
-        print('Full {}ed text copied to clipboard.'.format(mode))
-    except:
-        pass  # Do nothing if pyperclip wasn't installed.
-
-while True:
-    print("Would you like to exit or to open the caesar engine ?")
-    print("'exit' or 'open': ")
-    reponse = input().lower()
-    if reponse == "exit":
-        print("Going back to the main room")
-        break
-    elif reponse == "open":
-        caesar()
-        print("going back to the main room")
-        break
-    else:
-        print("invalid key, make sure to type 'exit' or 'open'")
