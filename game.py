@@ -9,7 +9,7 @@ key_found = False
 state = "None"
 
 def menu():
-    print("Menu opening ... \n")
+    print("\nMenu opening ... \n")
     menu_opened = True
     while menu_opened:
 
@@ -24,24 +24,24 @@ def menu():
         match reponse_menu:
 
             case "quit":
-                print("Thank you for playing, but I guess someone else will achieve this task...\n")
+                print("\nThank you for playing, but I guess someone else will achieve this task...\n")
                 sys.exit()
                 
             case "close":
-                print("menu closing... \n")
+                print("\nmenu closing... \n")
                 menu_opened = False
 
             case "catalog":
                 if key_found:
-                    print("Items: Key for the princess' room \n")
+                    print("\nItems: Key for the princess' room \n")
                 else:
-                    print("Items: None \n")
+                    print("\nItems: None \n")
                 
             case "story":
-                print("The story ")
+                print("\nThe story \n")
 
             case _:
-                print("We cant seem to find this commend\n")
+                print("\nWe cant seem to find this commend\n")
 
 def princess_room():
     
@@ -223,5 +223,7 @@ def main_game():
             case _:
                 print("We cant seem to find this commend.\n")
 
+def princess():
+    pass
 
 main_game()
